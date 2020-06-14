@@ -307,7 +307,7 @@ static void (*handler[LASTEvent]) (XEvent *) = {
 	[ConfigureRequest] = configurerequest,
 	[ConfigureNotify] = configurenotify,
 	[DestroyNotify] = destroynotify,
-	//[EnterNotify] = enternotify,
+	[EnterNotify] = enternotify,
 	[Expose] = expose,
 	[FocusIn] = focusin,
 	[KeyPress] = keypress,
@@ -1599,6 +1599,9 @@ run(void)
 void
 runAutostart(void) {
 	system("killall -q dwmblocks; dwmblocks &");
+	system("pulseaudio -D &");
+	system("redshift -x &; redshift-gtk -O 4500k &");
+	system("compton --config /home/romeu/.config/compton/compton.conf");
 }
 
 void
