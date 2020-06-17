@@ -19,12 +19,18 @@ static char normbgcolor[]           = "#1d2021";
 static char normbordercolor[]       = "#7c6f64";
 static char normfgcolor[]           = "#a89984";
 static char selfgcolor[]            = "#dddcff";
-static char selbordercolor[]        = "#fe8019";
+//static char selbordercolor[]        = "#fe8019";
+static char selbordercolor[]        = "#d79921";
 static char selbgcolor[]            = "#1d2021";
 static char *colors[][3] = {
        /*               fg           bg           border   */
-       [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
-       [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
+       [SchemeNorm] = { selbordercolor, selbordercolor, selbordercolor },
+       [SchemeSel]  = { selbordercolor,  selbordercolor,  selbordercolor  },
+       [SchemeStatus]  = { "#ebdbb2", normbgcolor,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+       [SchemeTagsSel]  = { "#ffffff", "#689d6a",  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+       [SchemeTagsNorm]  = { "#ebdbb2", normbgcolor,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+       [SchemeInfoSel]  = { "#ffffff", normbgcolor,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+       [SchemeInfoNorm]  = { "#ebdbb2", normbgcolor,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 typedef struct {
