@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int snap      = 16;       /* snap pixel */
+static const unsigned int snap      = 8;       /* snap pixel */
 static const unsigned int gappih    = 4;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 4;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 4;       /* horiz outer gap between windows and screen edge */
@@ -20,17 +20,17 @@ static char normbordercolor[]       = "#7c6f64";
 static char normfgcolor[]           = "#a89984";
 static char selfgcolor[]            = "#dddcff";
 //static char selbordercolor[]        = "#fe8019";
-static char selbordercolor[]        = "#d79921";
+static char selbordercolor[]        = "#ffffff";
 static char selbgcolor[]            = "#1d2021";
 static char *colors[][3] = {
        /*               fg           bg           border   */
-       [SchemeNorm] = { selbordercolor, selbordercolor, selbordercolor },
-       [SchemeSel]  = { selbordercolor,  selbordercolor,  selbordercolor  },
-       [SchemeStatus]  = { "#ebdbb2", normbgcolor,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+       [SchemeNorm] = { "#928374", "#928374", "#928374" },
+       [SchemeSel]  = { "#fe8019",  "#fe8019", "#fe8019"  },
+       [SchemeStatus]  = { "#ebdbb2", "#1d2021",  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
        [SchemeTagsSel]  = { "#ffffff", "#689d6a",  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-       [SchemeTagsNorm]  = { "#ebdbb2", normbgcolor,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-       [SchemeInfoSel]  = { "#ffffff", normbgcolor,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-       [SchemeInfoNorm]  = { "#ebdbb2", normbgcolor,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+       [SchemeTagsNorm]  = { "#ebdbb2", "#1d2021",  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+       [SchemeInfoSel]  = { "#ffffff", "#1d2021",  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+       [SchemeInfoNorm]  = { "#ebdbb2", "#1d2021",  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 typedef struct {
@@ -75,7 +75,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
 static const Layout layouts[] = {
