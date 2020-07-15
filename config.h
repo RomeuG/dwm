@@ -210,11 +210,11 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD("st -e newsboat; pkill -RTMIN+6 dwmblocks") }, */
 	/* { MODKEY,			XK_m,		spawn,		SHCMD("st -e ncmpcpp") }, */
 	{ MODKEY|ControlMask,		XK_m,		spawn,		SHCMD("urxvtc -e alsamixer") },
-	{ MODKEY,			XK_comma,	spawn,		SHCMD("mpc prev") },
+	{ MODKEY,			XK_comma,	spawn,		SHCMD("mpc prev ; pkill -RTMIN+11 dwmblocks") },
 	/* { MODKEY|ShiftMask,		XK_comma,	spawn,		SHCMD("mpc seek 0%") }, */
-	{ MODKEY,			XK_slash,	spawn,		SHCMD("mpc next") },
+	{ MODKEY,			XK_slash,	spawn,		SHCMD("mpc next ; pkill -RTMIN+11 dwmblocks") },
 	/* { MODKEY|ShiftMask,		XK_period,	spawn,		SHCMD("mpc repeat") }, */
-	{ MODKEY,                       XK_period,      spawn,          SHCMD("mpc toggle") },
+	{ MODKEY,           XK_period,  spawn,      SHCMD("mpc toggle ; pkill -RTMIN+11 dwmblocks") },
 
 	{ MODKEY,			XK_Left,	focusmon,	{.i = -1 } },
 	{ MODKEY|ShiftMask,		XK_Left,	tagmon,		{.i = -1 } },
@@ -320,4 +320,3 @@ static Button buttons[] = {
 	{ ClkTagBar,		0,		Button5,	shiftview,	{.i = 1} },
 	{ ClkRootWin,		0,		Button2,	togglebar,	{0} },
 };
-
