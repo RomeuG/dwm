@@ -69,7 +69,8 @@ static const Rule rules[] = {
 	{ "RuneLite", NULL,        NULL,             0,            1,           0,         0,        -1 },
 	{ "Sxiv",     NULL,        NULL,             0,            1,           0,         0,        -1 },
 
-	{ "polkit-gnome-authentication-agent-1",     NULL,        NULL,             0,            1,           0,         0,        -1 },
+	{ "microsoft teams - preview", NULL, NULL, 0, 1, 0, 0, -1 },
+	{ "polkit-gnome-authentication-agent-1", NULL, NULL, 0, 1, 0, 0, -1 },
 };
 
 /* layout(s) */
